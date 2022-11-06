@@ -32,11 +32,6 @@
     display: flex;
     flex-direction: column;
     min-width: var(--theme-shape-btn-width);
-
-    font-family: var(--theme-typography-body-font-family);
-    font-size: var(--theme-typography-body-font-size);
-    color: var(--theme-typography-body-color);
-    letter-spacing: var(--theme-typography-body-letter-spacing);
 }
 
 .form-input > label {
