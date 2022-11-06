@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, forwardRef, InputHTMLAttributes, ReactNode } from 'react';
-import clsx, { ClassValue } from 'clsx';
+import clsx from 'clsx';
 
-import { BaseComponent } from '@/src/components/types';
+import { BaseComponent, WithClassValue } from '@/src/components/types';
 import styles from './Form.module.css';
 
 type FormInputProps = BaseComponent<HTMLInputElement> &
@@ -33,26 +33,25 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({ className, lab
 
 FormInput.displayName = 'FormInput';
 
-type FormButtonProps = Omit<
-    DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
-    'className'
-> & {
-    fullWidth?: boolean;
-    className?: ClassValue;
-};
+type FormButtonProps = WithClassValue<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>>;
 
-function FormButton({ className, fullWidth = false, ...rest }: FormButtonProps) {
-    return <button className={clsx(className, styles['form-button'], { fullWidth })} {...rest} />;
+function FormButton({ className, ...rest }: FormButtonProps) {
+    return <button className={clsx(className, styles['form-button'])} {...rest} />;
 }
 
 function FormRow({ className, ...rest }: BaseComponent<HTMLDivElement>) {
     return <div className={clsx(className, styles['form-row'])} {...rest} />;
 }
 
+function FormActions({ className, ...rest }: BaseComponent<HTMLDivElement>) {
+    return <div className={clsx(className, styles['form-actions'])} {...rest} />;
+}
+
 export function Form({ className, ...rest }: BaseComponent<HTMLFormElement>) {
     return <form className={clsx(className, styles.form)} {...rest} />;
 }
 
+Form.Actions = FormActions;
+Form.Button = FormButton;
 Form.Input = FormInput;
 Form.Row = FormRow;
-Form.Button = FormButton;

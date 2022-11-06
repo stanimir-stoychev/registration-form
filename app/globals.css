@@ -23,6 +23,7 @@
 
     --theme-shape-rounded: 4px;
     --theme-shape-round: 50%;
+    --theme-shape-btn-width: 256px;
 
     --theme-animations-short: 250ms;
     --theme-animations-medium: 500ms;
