@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    font-family: var(--theme-typography-body-font-family);
+    font-size: var(--theme-typography-body-font-size);
+    color: var(--theme-typography-body-color);
+    letter-spacing: var(--theme-typography-body-letter-spacing);
 }
 
 .checklist-item {
