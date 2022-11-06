@@ -1,3 +1,14 @@
+.form {
+    border: 2px solid var(--theme-typography-body-color);
+    background-color: var(--theme-palette-white);
+    padding: var(--theme-spacing-4) var(--theme-spacing-2);
+
+    font-family: var(--theme-typography-body-font-family);
+    font-size: var(--theme-typography-body-font-size);
+    color: var(--theme-typography-body-color);
+    letter-spacing: var(--theme-typography-body-letter-spacing);
+}
+
 .form-row {
     display: flex;
     flex-direction: column;
@@ -11,10 +22,10 @@
     display: flex;
     flex-direction: column;
 
-    font-family: var(--theme-typography-form-font-family);
-    font-size: var(--theme-typography-form-font-size);
-    color: var(--theme-typography-form-color);
-    letter-spacing: var(--theme-typography-form-letter-spacing);
+    font-family: var(--theme-typography-body-font-family);
+    font-size: var(--theme-typography-body-font-size);
+    color: var(--theme-typography-body-color);
+    letter-spacing: var(--theme-typography-body-letter-spacing);
 }
 
 .form-input > label {
@@ -23,8 +34,25 @@
 }
 
 .form-input > input {
-    border: 2px solid;
+    border: 2px solid var(--theme-typography-body-color);
     padding: var(--theme-spacing-2);
+    height: 52px;
+}
+
+.form-button {
+    border: 2px solid var(--theme-palette-black);
+    padding: var(--theme-spacing-2);
+    background-color: var(--theme-palette-black);
+    color: var(--theme-palette-white);
+    transition: color var(--theme-animations-short), background-color var(--theme-animations-short),
+        border-radius var(--theme-animations-short);
+    will-change: color, background-color, border-radius;
+}
+
+.form-button:hover {
+    color: var(--theme-palette-black);
+    background-color: var(--theme-palette-white);
+    border-radius: var(--theme-shape-rounded);
 }
 
 /* tablet & up */

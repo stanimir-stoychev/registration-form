@@ -13,9 +13,18 @@
 
     --theme-palette-error: #9e0000;
     --theme-palette-success: #009e2d;
+    --theme-palette-black: #000;
+    --theme-palette-white: #fff;
 
-    --theme-typography-form-font-family: ArialMT;
-    --theme-typography-form-font-size: 18px;
-    --theme-typography-form-color: #000000;
-    --theme-typography-form-letter-spacing: 0;
+    --theme-typography-body-font-family: ArialMT;
+    --theme-typography-body-font-size: 18px;
+    --theme-typography-body-color: var(--theme-palette-black);
+    --theme-typography-body-letter-spacing: 0;
+
+    --theme-shape-rounded: 4px;
+    --theme-shape-round: 50%;
+
+    --theme-animations-short: 250ms;
+    --theme-animations-medium: 500ms;
+    --theme-animations-long: 700ms;
 }
