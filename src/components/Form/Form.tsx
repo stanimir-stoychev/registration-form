@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, forwardRef, InputHTMLAttributes, ReactNode } from 'react';
-import clsx from 'clsx';
+import clsx, { ClassValue } from 'clsx';
 
 import { BaseComponent, WithClassValue } from '@/src/components/types';
 import styles from './Form.module.css';
@@ -19,11 +19,12 @@ type FormInputProps = BaseComponent<HTMLInputElement> &
           }
     ) & {
         helperText?: ReactNode;
+        wrapperProps?: BaseComponent<HTMLDivElement>;
     };
 
 const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
-    ({ className, label, labelProps, helperText, ...rest }, ref) => (
-        <div className={styles['form-input']}>
+    ({ className, label, labelProps, helperText, wrapperProps, ...rest }, ref) => (
+        <div {...wrapperProps} className={clsx(wrapperProps?.className, styles['form-input'])}>
             {label && (
                 <label htmlFor={rest.id} {...labelProps} className={clsx(labelProps?.className)}>
                     {label}
