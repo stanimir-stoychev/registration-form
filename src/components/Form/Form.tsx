@@ -17,19 +17,25 @@ type FormInputProps = BaseComponent<HTMLInputElement> &
               label?: undefined;
               labelProps?: undefined;
           }
-    );
+    ) & {
+        helperText?: ReactNode;
+    };
 
-const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({ className, label, labelProps, ...rest }, ref) => (
-    <div className={styles['form-input']}>
-        {label && (
-            <label htmlFor={rest.id} {...labelProps} className={clsx(labelProps?.className)}>
-                {label}
-            </label>
-        )}
+const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
+    ({ className, label, labelProps, helperText, ...rest }, ref) => (
+        <div className={styles['form-input']}>
+            {label && (
+                <label htmlFor={rest.id} {...labelProps} className={clsx(labelProps?.className)}>
+                    {label}
+                </label>
+            )}
 
-        <input ref={ref} className={clsx(className)} type="text" {...rest} />
-    </div>
-));
+            <input ref={ref} className={clsx(className)} type="text" {...rest} />
+
+            {helperText}
+        </div>
+    ),
+);
 
 FormInput.displayName = 'FormInput';
 

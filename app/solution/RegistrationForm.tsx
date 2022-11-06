@@ -47,20 +47,22 @@ export function RegistrationForm({
             <Form.Row>
                 <Form.Input label="Email" id="email" type="email" {...register('email', { required: true })} />
                 <div>
-                    <Form.Input
-                        label="Password"
-                        id="password"
-                        type="password"
-                        {...register('password', { required: true })}
+                <Form.Input
+                    label="Password"
+                    id="password"
+                    type="password"
+                    helperText={
                     />
-                    <Checklist>
-                        {passwordChecklist.map(({ label, isCompleted }, index) => (
-                            <Checklist.Item key={index} completed={isCompleted(password)}>
-                                {label}
-                            </Checklist.Item>
-                        ))}
-                    </Checklist>
-                </div>
+                        <Checklist>
+                            {passwordChecklist.map(({ label, isCompleted }, index) => (
+                                <Checklist.Item key={index} completed={isCompleted(password)}>
+                                    {label}
+                                </Checklist.Item>
+                            ))}
+                        </Checklist>
+                    }
+                    {...register('password', { required: true })}
+                />
             </Form.Row>
             <Form.Actions>
                 <Form.Button disabled={!isValid || !isStrongPassword} type="submit">

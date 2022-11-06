@@ -45,6 +45,10 @@
     height: 52px;
 }
 
+.form-input > input + * {
+    margin-top: var(--theme-spacing-2);
+}
+
 .form-button {
     min-width: var(--theme-shape-btn-width);
     border: 2px solid var(--theme-palette-black);
