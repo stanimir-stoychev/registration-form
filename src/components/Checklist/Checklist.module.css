@@ -1,0 +1,25 @@
+.checklist {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+}
+
+.checklist-item > svg {
+    margin-right: var(--theme-spacing-1);
+}
+
+.status-indicator {
+    color: var(--theme-palette-error);
+    margin-right: var(--theme-spacing-0_5);
+}
+
+.status-indicator[data-completed='true'] {
+    color: var(--theme-palette-success);
+}
