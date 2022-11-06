@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { BaseComponent } from './types';
+import { BaseComponent } from '@/src/components/types';
 
 function Container({ className, children, ...rest }: BaseComponent) {
     return (
@@ -9,20 +9,12 @@ function Container({ className, children, ...rest }: BaseComponent) {
     );
 }
 
-function HeroTitle({ className, children, ...rest }: BaseComponent<HTMLHeadingElement>) {
-    return (
-        <h1 className={clsx('text-3xl', 'md:text-5xl', 'font-bold', 'my-4', className)} {...rest}>
-            {children}
-        </h1>
-    );
+function HeroTitle({ className, ...rest }: BaseComponent<HTMLHeadingElement>) {
+    return <h1 className={clsx('text-3xl', 'md:text-5xl', 'font-bold', 'my-4', className)} {...rest} />;
 }
 
-function HeroSubTitle({ className, children, ...rest }: BaseComponent<HTMLHeadingElement>) {
-    return (
-        <h3 className={clsx('text-base', 'md:text-2xl', className)} {...rest}>
-            {children}
-        </h3>
-    );
+function HeroSubTitle({ className, ...rest }: BaseComponent<HTMLHeadingElement>) {
+    return <h3 className={clsx('text-base', 'md:text-2xl', className)} {...rest} />;
 }
 
 export function Page(props: BaseComponent) {
