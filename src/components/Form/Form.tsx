@@ -2,7 +2,7 @@ import { forwardRef, InputHTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
 
 import { BaseComponent } from '@/src/components/types';
-import styles from './RegistrationForm.module.css';
+import styles from './Form.module.css';
 
 type FormInputProps = BaseComponent<HTMLInputElement> &
     InputHTMLAttributes<HTMLInputElement> &
@@ -33,8 +33,13 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({ className, lab
 
 FormInput.displayName = 'FormInput';
 
-export function RegistrationForm({ className, ...rest }: BaseComponent<HTMLFormElement>) {
+function FormRow({ className, ...rest }: BaseComponent<HTMLDivElement>) {
+    return <div className={clsx(className, styles['form-row'])} {...rest} />;
+}
+
+export function Form({ className, ...rest }: BaseComponent<HTMLFormElement>) {
     return <form className={clsx(className)} {...rest} />;
 }
 
-RegistrationForm.Input = FormInput;
+Form.Input = FormInput;
+Form.Row = FormRow;

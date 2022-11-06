@@ -1,2 +1,3 @@
+export * from './Checklist';
 export * from './Page';
-export * from './RegistrationForm';
+export * from './Form';
