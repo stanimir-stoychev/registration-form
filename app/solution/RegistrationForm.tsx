@@ -40,19 +40,19 @@ export function RegistrationForm({
         [password, passwordChecklist],
     );
 
-    const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        alert(JSON.stringify(data, null, 4));
+    };
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Row>
                 <Form.Input label="Email" id="email" type="email" {...register('email', { required: true })} />
-                <div>
                 <Form.Input
                     label="Password"
                     id="password"
                     type="password"
                     helperText={
-                    />
                         <Checklist>
                             {passwordChecklist.map(({ label, isCompleted }, index) => (
                                 <Checklist.Item key={index} completed={isCompleted(password)}>
