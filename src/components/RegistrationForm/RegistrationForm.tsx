@@ -1,10 +1,11 @@
-import { forwardRef, ReactNode } from 'react';
+import { forwardRef, InputHTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
 
 import { BaseComponent } from '@/src/components/types';
 import styles from './RegistrationForm.module.css';
 
 type FormInputProps = BaseComponent<HTMLInputElement> &
+    InputHTMLAttributes<HTMLInputElement> &
     (
         | {
               id: string;
