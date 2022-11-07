@@ -17,7 +17,7 @@ export default function Navigation() {
                 <div className="flex w-1/2 justify-end content-center">
                     <Link
                         className="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4"
-                        href="https://github.com/stanimir-stoychev"
+                        href="https://github.com/stanimir-stoychev/registration-form"
                         target="_blank"
                     >
                         <FontAwesomeIcon icon={faGithub} size="2x" />
