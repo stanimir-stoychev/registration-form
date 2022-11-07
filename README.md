@@ -4,9 +4,9 @@
 
 ## Dev environment
 
-    1. Install the npm dependencies - `yarn` or `npm install`
-    2. Start the dev server - `yarn dev` or `npm run dev`
-    3. Run tests - `yarn test` or `npm run test`
+1. Install the npm dependencies - `yarn` or `npm install`
+2. Start the dev server - `yarn dev` or `npm run dev`
+3. Run tests - `yarn test` or `npm run test`
 
 ### What to expect
 
@@ -14,5 +14,5 @@ Once one starts the app one should expect to see a simple home page with 2 butto
 
 ### Package justification
 
-    - `tailwindcss` - This package is present just to allow for the overall app structure setup. Although a powerful tool, as per the challenge I am not to use any fancy tools but to demonstrate CSS proficiency instead.
-    - `react-hook-form` - This package will bring in both **unification**, **clarity** when it comes to managing forms - error handling, data rules, etc.
+-   `tailwindcss` - This package is present just to allow for the overall app structure setup. Although a powerful tool, as per the challenge I am not to use any fancy tools but to demonstrate CSS proficiency instead.
+-   `react-hook-form` - This package will bring in both **unification**, **clarity** when it comes to managing forms - error handling, data rules, etc.
