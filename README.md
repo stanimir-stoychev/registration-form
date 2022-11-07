@@ -2,6 +2,8 @@
 
 > Please note that this is a NextJS project. For more information please read [here](README.create-next-app.md).
 
+> The website is also hosted on Vercel -> [website link](https://registration-form-delta-khaki.vercel.app/)
+
 ## Dev environment
 
 1. Install the npm dependencies - `yarn` or `npm install`
