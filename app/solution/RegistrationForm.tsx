@@ -14,7 +14,7 @@ type PasswordChecklistItem = {
     isCompleted(password: string): boolean;
 };
 
-const DEFAULT_PASSWORD_STRENGTH_CHECKERS: PasswordChecklistItem[] = [
+export const DEFAULT_PASSWORD_STRENGTH_CHECKERS: PasswordChecklistItem[] = [
     { label: '8 or more characters', isCompleted: (password) => password.length >= 8 },
     { label: '1 or more lowercase letters', isCompleted: (password) => /[a-z]/g.test(password) },
     { label: '1 or more uppercase letters', isCompleted: (password) => /[A-Z]/g.test(password) },

@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, forwardRef, InputHTMLAttributes, ReactNode } from 'react';
-import clsx, { ClassValue } from 'clsx';
+import clsx from 'clsx';
 
 import { BaseComponent, WithClassValue } from '@/src/components/types';
 import styles from './Form.module.css';
@@ -55,7 +55,7 @@ function FormActions({ className, ...rest }: BaseComponent<HTMLDivElement>) {
 }
 
 export function Form({ className, ...rest }: BaseComponent<HTMLFormElement>) {
-    return <form className={clsx(className, styles.form)} {...rest} />;
+    return <form aria-label="form" className={clsx(className, styles.form)} {...rest} />;
 }
 
 Form.Actions = FormActions;
