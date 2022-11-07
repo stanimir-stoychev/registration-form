@@ -11,6 +11,7 @@ describe('Registration Form', () => {
         render(<RegistrationForm />);
         expect(screen.getByLabelText('Email')).toBeInTheDocument();
         expect(screen.getByLabelText('Password')).toBeInTheDocument();
+        expect(screen.getByText('Submit')).toBeInTheDocument();
     });
 
     it('renders expected password strength checks', () => {
